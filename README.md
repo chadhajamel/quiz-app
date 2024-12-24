@@ -18,7 +18,7 @@ An interactive quiz application built with Vue.js that allows users to test thei
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/quiz-app.git
+git clone https://github.com/chadhajamel/quiz-app.git
 
 # Navigate to project folder
 cd quiz-app
