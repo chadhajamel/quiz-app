@@ -1,24 +1,27 @@
-# quiz-app
+# Vue Quiz Application 📝
 
-## Project setup
-```
+An interactive quiz application built with Vue.js that allows users to test their knowledge through engaging questions and real-time feedback.
+
+## ✨ Features
+- Multiple choice questions
+- Score tracking
+- Timer functionality
+- Responsive design
+- Progress tracking
+
+## 🛠️ Prerequisites
+- Node.js (v22.5.1)
+- npm or yarn
+
+## 🚀 Getting Started
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/quiz-app.git
+
+# Navigate to project folder
+cd quiz-app
+
+# Install dependencies
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
