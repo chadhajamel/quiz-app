@@ -1,0 +1,144 @@
+{
+    "quiz": {
+      "title": "Color Personality Leadership Assessment",
+      "description": "Discover your leadership style based on color personality traits",
+      "questions": [
+        {
+          "id": 1,
+          "question": "When starting a new project, what's your first priority?",
+          "choices": [
+            "Creating detailed plans and analyzing risks",
+            "Getting the team excited and brainstorming ideas",
+            "Setting clear goals and taking immediate action",
+            "Ensuring team harmony and understanding"
+          ],
+          "correctAnswer": "Creating detailed plans and analyzing risks",
+          "colorType": "Blue",
+          "explanation": "Blue leaders prioritize careful planning and analysis"
+        },
+        {
+          "id": 2,
+          "question": "How do you handle team meetings?",
+          "choices": [
+            "Follow structured agendas and take detailed notes",
+            "Keep it fun and encourage creative discussions",
+            "Focus on results and quick decision-making",
+            "Ensure everyone feels heard and valued"
+          ],
+          "correctAnswer": "Keep it fun and encourage creative discussions",
+          "colorType": "Yellow",
+          "explanation": "Yellow leaders excel at creating positive, collaborative environments"
+        },
+        {
+          "id": 3,
+          "question": "When facing a project crisis, you typically:",
+          "choices": [
+            "Analyze data to find the root cause",
+            "Rally the team's spirit and optimism",
+            "Take charge and make quick decisions",
+            "Listen to everyone's concerns before acting"
+          ],
+          "correctAnswer": "Take charge and make quick decisions",
+          "colorType": "Red",
+          "explanation": "Red leaders are action-oriented and decisive in crisis"
+        },
+        {
+          "id": 4,
+          "question": "Your preferred approach to team feedback is:",
+          "choices": [
+            "Written reports with detailed analysis",
+            "Enthusiastic praise and encouragement",
+            "Direct and immediate performance feedback",
+            "Supportive and considerate discussions"
+          ],
+          "correctAnswer": "Supportive and considerate discussions",
+          "colorType": "Green",
+          "explanation": "Green leaders focus on supportive, harmonious communication"
+        },
+        {
+          "id": 5,
+          "question": "What motivates you most in leadership?",
+          "choices": [
+            "Achieving perfect processes and systems",
+            "Inspiring others and driving innovation",
+            "Accomplishing goals and seeing results",
+            "Building strong team relationships"
+          ],
+          "correctAnswer": "Accomplishing goals and seeing results",
+          "colorType": "Red",
+          "explanation": "Red leaders are motivated by achievement and results"
+        },
+        {
+          "id": 6,
+          "question": "Your approach to project planning involves:",
+          "choices": [
+            "Detailed timelines and risk assessment",
+            "Creative brainstorming and possibilities",
+            "Quick action plans and deadlines",
+            "Consensus building and team input"
+          ],
+          "correctAnswer": "Detailed timelines and risk assessment",
+          "colorType": "Blue",
+          "explanation": "Blue leaders excel at methodical planning and organization"
+        },
+        {
+            "id": 7,
+            "question": "When dealing with project changes, you prefer to:",
+            "choices": [
+              "Document and analyze the impact thoroughly",
+              "See it as an opportunity for innovation",
+              "Make quick adjustments and move forward",
+              "Ensure the team feels comfortable with changes"
+            ],
+            "correctAnswer": "Document and analyze the impact thoroughly",
+            "colorType": "Blue",
+            "explanation": "Blue leaders prioritize thorough analysis of changes"
+          },
+          {
+            "id": 8,
+            "question": "Your preferred method of conflict resolution is:",
+            "choices": [
+              "Analyzing facts and finding logical solutions",
+              "Finding creative win-win solutions",
+              "Taking decisive action to resolve quickly",
+              "Maintaining harmony and understanding"
+            ],
+            "correctAnswer": "Finding creative win-win solutions",
+            "colorType": "Yellow",
+            "explanation": "Yellow leaders seek innovative solutions that benefit all"
+          },
+          {
+            "id": 9,
+            "question": "In team development, you focus most on:",
+            "choices": [
+              "Establishing clear processes and procedures",
+              "Building enthusiasm and creative potential",
+              "Setting and achieving concrete goals",
+              "Creating a supportive environment"
+            ],
+            "correctAnswer": "Creating a supportive environment",
+            "colorType": "Green",
+            "explanation": "Green leaders prioritize team wellbeing and support"
+          },
+          {
+            "id": 10,
+            "question": "When implementing new technologies, you typically:",
+            "choices": [
+              "Research thoroughly before making decisions",
+              "Embrace innovation with enthusiasm",
+              "Focus on immediate practical benefits",
+              "Consider team adaptation needs"
+            ],
+            "correctAnswer": "Embrace innovation with enthusiasm",
+            "colorType": "Yellow",
+            "explanation": "Yellow leaders embrace change with optimism"
+          }
+      ],
+      "colorProfiles": {
+        "Blue": "Analytical, detail-oriented, methodical",
+        "Yellow": "Creative, optimistic, enthusiastic",
+        "Red": "Action-oriented, decisive, results-focused",
+        "Green": "Supportive, harmonious, relationship-focused"
+      }
+    }
+  }
