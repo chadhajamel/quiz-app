@@ -27,13 +27,8 @@
         >
           Submit Answer
         </button>
-  
         <div v-if="answerSubmitted" class="feedback">
-          <p :class="isCorrect ? 'correct' : 'incorrect'">
-            {{ feedbackMessage }}
-          </p>
-          <p class="explanation">{{ currentQuestion.explanation }}</p>
-          <button @click="nextQuestion" class="next-btn">Next Question</button>
+          <button @click="nextQuestion" class="next-btn feedback">Next Question</button>
         </div>
       </div>
   
@@ -57,58 +52,51 @@
   </div>
   </template>
   
-  <script>
-  import { ref ,computed} from 'vue';
-  import quizData from '../assets/data/quizData.json';
-  
-  export default {
-    name: 'QuizView',
-    setup() {
-      const questions = ref(quizData.quiz.questions);
-      const currentQuestionIndex = ref(0);
-      const selectedAnswer = ref('');
-      const answerSubmitted = ref(false);
-      const isCorrect = ref(false);
-      const score = ref(0);
-      const feedbackMessage = ref('');
-  
-      const currentQuestion = computed(() => questions.value[currentQuestionIndex.value]);
-      const isQuizComplete = computed(() => currentQuestionIndex.value >= questions.value.length);
-  
-      const selectAnswer = (answer) => {
-        if (!answerSubmitted.value) {
-          selectedAnswer.value = answer;
-        }
-      };
-      const colorScores = ref({Blue: 0,Yellow: 0,Red: 0,Green: 0});
-      const submitAnswer = () => {
+  <script setup>
+ import {ref, computed} from 'vue';
+ import quizData from '../assets/data/quizData.json';
+ const questions = ref(quizData.quiz.questions);
+ const currentQuestionIndex = ref(0);
+ const selectedAnswer = ref('');
+ const answerSubmitted = ref(false);
+ const isCorrect = ref(false);
+ const score = ref(0);
+ const currentQuestion = computed(() => questions.value[currentQuestionIndex.value]);
+const isQuizComplete = computed(() => currentQuestionIndex.value >= questions.value.length);
+   const selectAnswer = (choice) => {
+    if (!answerSubmitted.value) {
+      selectedAnswer.value = choice;
+    }
+   };
+
+ const colorScores = ref({Blue: 0,Yellow: 0,Red: 0,Green: 0});
+ const submitAnswer = () => {
       answerSubmitted.value = true;
       isCorrect.value = selectedAnswer.value === currentQuestion.value.correctAnswer;
       if (isCorrect.value) {
         score.value++;
         // Increment color score based on current question's color type
         colorScores.value[currentQuestion.value.colorType]++;
-        feedbackMessage.value = 'Correct!';
-      } else {
-        feedbackMessage.value = 'Incorrect. Try again!';
+      
+      }else{
+      console.log('wrong answer');
       }
     };
-      const nextQuestion = () => {
-        currentQuestionIndex.value++;
-        selectedAnswer.value = '';
-        answerSubmitted.value = false;
-        feedbackMessage.value = '';
-      };
-      const dominantColor = computed(() => {
+ const nextQuestion=()=>{
+    currentQuestionIndex.value++;
+    selectedAnswer.value='';
+    answerSubmitted.value=false;
+ }
+
+ const dominantColor = computed(() => {
       return Object.entries(colorScores.value).reduce((a, b) => 
         b[1] > a[1] ? b : a)[0];
     });
-
+  
     const colorDescription = computed(() => {
       return quizData.quiz.colorProfiles[dominantColor.value];
     });
-
-    const getColorCode = (color) => {
+     const getColorCode = (color) => {
       const colors = {
         Blue: '#4169E1',
         Yellow: '#FFD700',
@@ -118,42 +106,17 @@
       return colors[color];
     };
 
-  
-      const restartQuiz = () => {
+    const restartQuiz = () => {
       currentQuestionIndex.value = 0;
       selectedAnswer.value = '';
       answerSubmitted.value = false;
       score.value = 0;
-      feedbackMessage.value = '';
       Object.keys(colorScores.value).forEach(color => {
         colorScores.value[color] = 0;
       });
     };
-  
-      return {
-        questions,
-        currentQuestionIndex,
-        currentQuestion,
-        selectedAnswer,
-        answerSubmitted,
-        isCorrect,
-        score,
-        isQuizComplete,
-        feedbackMessage,
-        selectAnswer,
-        submitAnswer,
-        nextQuestion,
-        restartQuiz,
-        quizData,
-        colorScores,
-        dominantColor,
-        colorDescription,
-        getColorCode
-      };
-    }
-  };
-
-  </script>
+    
+     </script>
   
   <style scoped>
   .quiz-container {
