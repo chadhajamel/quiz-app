@@ -1,7 +1,7 @@
 <template>
     <div class="home-container">
         <div class="hero-image">
-            <img src="@/assets/images/art-human-brain.avif" alt="Creative Brain Concept" />
+            <img src="@/assets/images/colorMind.jpg" alt="Creative Brain Concept" />
         </div>
         <div class="content">
             <h1>Welcome to the ColorMind Quiz App!</h1>
